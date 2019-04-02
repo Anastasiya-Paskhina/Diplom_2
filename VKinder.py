@@ -5,6 +5,9 @@ from pprint import pprint
 
 def top10(main_user):
     database = DataBase()
+    data_from_db = database.data_record()
+    for user in data_from_db:
+        print(user['users_list'])
     select_users = main_user.select_users_search()
     select_users_dict = dict()
     select_users_photos = dict()
