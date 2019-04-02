@@ -19,3 +19,8 @@ class DataBase:
     def check(self, value):
         res = list(self.db.users_list.find({'user_id': value}))
         return len(res) == 0
+    
+    def data_record(self):
+        db = self.db
+        user_list = self.db.users_list
+        print(self.db.users_list.find())
